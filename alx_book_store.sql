@@ -9,7 +9,7 @@ CREATE TABLE Books(
     author_id INT, 
     price DOUBLE, 
     publication_date DATE,
-    FOREIGN KEY (author_id) REFERENCES authors (author_id)
+    FOREIGN KEY (author_id) REFERENCES Authors (author_id)
     );
 CREATE TABLE Customers(
     customer_id INT PRIMARY KEY,
