@@ -16,8 +16,7 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS Books(
     author_id INT, 
     price DOUBLE, 
     publication_date DATE,
-    FOREIGN KEY (author_id) REFERENCES Authors (author_id))
-    """)
+    FOREIGN KEY (author_id) REFERENCES Authors (author_id))""")
 
 mycursor.execute("""CREATE TABLE IF NOT EXISTS Customers(
     customer_id INT PRIMARY KEY,
@@ -40,3 +39,4 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS Order_Details(
     FOREIGN KEY (order_id) REFERENCES Orders(order_id), 
     FOREIGN KEY (book_id) REFERENCES Books(book_id))
 """)
+mydb.commit()
